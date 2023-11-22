@@ -22,11 +22,20 @@ $countries = [
     <ul>
         <?php 
             $biggestCountry = null;
+            $smallestCountry = null;
         ?>
         <?php foreach ($countries as $country) {  
+            /* If there is no biggestCountry 
+                or if the current is bigger then biggestCountry
+            */
             if ($biggestCountry === null || $country['population'] > $biggestCountry['population']) {
                 $biggestCountry = $country;
             }
+
+            if ($smallestCountry === null || $country['population'] < $smallestCountry['population']) {
+                $smallestCountry = $country;
+            }
+
             ?>
             <li><?=$country["name"]; ?>, population: <?=$country["population"]; ?></li>
         <?php } ?>
@@ -34,8 +43,10 @@ $countries = [
 
     <h2>Biggest country:</h2>
     <p><?=$biggestCountry["name"] ?> with a popultion of <?=$biggestCountry["population"] ?>M</p>
-
-
+    
+    <h2>Smallest country:</h2>
+    <p><?=$smallestCountry["name"] ?> with a popultion of <?=$smallestCountry["population"] ?>M</p>
+    
 </body>
 
 </html>
