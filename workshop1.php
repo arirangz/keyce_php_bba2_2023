@@ -46,7 +46,7 @@ $countries = [
     
     <h2>Smallest country:</h2>
     <p><?=$smallestCountry["name"] ?> with a popultion of <?=$smallestCountry["population"] ?>M</p>
-    
+
 </body>
 
 </html>
