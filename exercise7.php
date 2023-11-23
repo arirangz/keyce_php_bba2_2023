@@ -14,6 +14,8 @@ function getPriceWithVAT(float $price, float $vat)
     <title>Exercise 6</title>
 </head>
 <body>
+
+
     <h2>Exercise 6</h2>
     <h3>Dell Laptop</h3>
     <?php $productPrice = 1000; ?>
