@@ -17,7 +17,7 @@
     </form>
     <?php if (isset($_POST["last_name"])) { ?>
         <?php if ($_POST["last_name"] != "") { ?>
-            <h2>Thank you for your subscription</h2>
+            <h2>Thank you <?=$_POST["last_name"] ?> for your subscription</h2>
         <?php } else { ?>
             <p>The last name is required</p>
         <?php } ?>

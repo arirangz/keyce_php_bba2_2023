@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>The form has been sent successfuly</h1>
+    <?php if (isset($_POST["username"])) { ?>
+        <?=$_POST['username'] ?>
+        <h1>The form has been sent successfuly</h1>
+    <?php } else {  ?>
+        <h2>Data not sent</h2>
+    <?php } ?>
 </body>
 </html>
