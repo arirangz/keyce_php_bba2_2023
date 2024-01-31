@@ -7,7 +7,11 @@ $car1 = new Car();
 $car1->brand = "Toyota";
 $car1->maxSpeed = 255;
 
-echo "The car 1 is : ".$car1->brand;
+//echo "The car 1 is : ".$car1->brand;
+
+$car1->displayBrand();
+
+echo $car1->getMaxSpeedKm();
 
 $car2 = new Car();
 $car2->brand = "Peugeot";

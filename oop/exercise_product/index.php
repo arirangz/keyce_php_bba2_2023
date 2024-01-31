@@ -18,5 +18,6 @@ $product1->vat = 20;
 <body>
     <h1><?=$product1->name ?></h1>
     <p>Price: <?=$product1->price ?> €</p>
+    <p>Price with VAT: <?=$product1->getPriceWithVat() ?></p>
 </body>
 </html>
