@@ -2,8 +2,21 @@
 
 class Car
 {
-    public string $brand;
-    public float $maxSpeed;
+    private string $brand;
+    private float $maxSpeed;
+
+    public function setMaxSpeed(float $maxSpeed):void
+    {
+        if ($maxSpeed >= 0) {
+            $this->maxSpeed = $maxSpeed;
+        } else {
+            $this->maxSpeed = 0;
+        }
+    }
+    public function setBrand(string $brand)
+    {
+        $this->brand = $brand;
+    }
 
     public function honk()
     {
