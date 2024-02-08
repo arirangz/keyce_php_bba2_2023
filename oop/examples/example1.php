@@ -1,12 +1,14 @@
 <?php
 
 require_once "Car.php";
+require_once "Boat.php";
 
 
-$car1 = new Car();
-$car1->setBrand("Toyota");
-$car1->setMaxSpeed(50);
+$car1 = new Car(4, 200, "Toyota");
 
-$car1->displayBrand();
 
-echo $car1->getMaxSpeedKm();
+var_dump($car1);
+
+$boat1 = new Boat(2, 50, "Yamaha");
+
+var_dump($boat1);
