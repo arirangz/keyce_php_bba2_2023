@@ -7,9 +7,11 @@ class Product
 
     public function __construct(string $name, float $price, float $vat)
     {
+
         $this->setName($name);
         $this->setPrice($price);
         $this->setVat($vat);
+
     }
 
     public function setName(string $name):void

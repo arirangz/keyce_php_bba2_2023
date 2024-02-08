@@ -3,6 +3,8 @@
 require_once "Product.php";
 
 $product1 = new Product("Dell Inspiron 15", 1000, 20);
+
+
 /*
 $product1->name = "Dell Inspiron 15";
 $product1->price = 1000;

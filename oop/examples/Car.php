@@ -1,35 +1,35 @@
 <?php
 
-class Car
-{
-    private string $brand;
-    private float $maxSpeed;
+require "Vehicle.php";
 
-    public function setMaxSpeed(float $maxSpeed):void
+class Car extends Vehicle
+{
+
+    private int $numberOfWheels;
+
+    public function __construct(int $numberOfWheels, float $maxSpeed, string $brand)
     {
-        if ($maxSpeed >= 0) {
-            $this->maxSpeed = $maxSpeed;
-        } else {
-            $this->maxSpeed = 0;
-        }
+        $this->setBrand($brand);
+        $this->setMaxSpeed($maxSpeed);
+        $this->setNumberOfWheels($numberOfWheels);
     }
-    public function setBrand(string $brand)
-    {
-        $this->brand = $brand;
-    }
+
 
     public function honk()
     {
         echo "bip bip";
     }
 
-    public function displayBrand()
+
+    public function getNumberOfWheels(): int
     {
-        echo "Brand: ".$this->brand;
+        return $this->numberOfWheels;
     }
 
-    public function getMaxSpeedKm()
+    public function setNumberOfWheels(int $numberOfWheels): self
     {
-        return $this->maxSpeed."km/h";
+        $this->numberOfWheels = $numberOfWheels;
+
+        return $this;
     }
 }
