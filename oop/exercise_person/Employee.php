@@ -53,4 +53,9 @@ class Employee extends Person
 
         return $this;
     }
+
+    public function getFullName():string
+    {
+        return $this->first_name . " " . $this->last_name. " ".$this->position;
+    }
 }

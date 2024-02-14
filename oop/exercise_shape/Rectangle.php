@@ -1,10 +1,10 @@
 <?php
 
-class Rectangle
+require_once "Shape.php";
+class Rectangle extends Shape
 {
     public float $length;
     public float $width;
-    public string $color;
 
     public function __construct(float $length, float $width, string $color)
     {
